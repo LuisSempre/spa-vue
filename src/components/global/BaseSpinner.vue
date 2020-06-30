@@ -11,9 +11,8 @@ export default {
       visible: false
     }
   },
-  create () {
+  created () {
     this.$root.$on('Spinner::show', this.alternarSpinner)
-
     this.$root.$on('Spinner::hide', this.alternarSpinner)
   },
   methods: {
@@ -25,8 +24,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/scss/_variables.scss";
-
 .base-spinner {
   top: 0;
   bottom: 0;
@@ -39,7 +36,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $dark-medium;
-  color: $feature;
+  background-color: var(--dark-medium);
+  color: var(--feature);
 }
 </style>
